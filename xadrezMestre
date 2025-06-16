@@ -1,0 +1,75 @@
+#include <stdio.h>
+
+
+void Mtorre(int torre){
+
+    if (torre <=5){
+        printf ("\n Torre se moveu %d casas para Direita", torre);
+        Mtorre (torre + 1);
+    }
+
+    
+}
+
+void Mrainha(int rainha){
+    if(rainha <=8){
+        printf ("\n Rainha se moveu %d casas para a Esquerda", rainha);
+        Mrainha (rainha + 1);
+    }
+   
+}
+
+void Mbispo(){
+
+  
+    for (int bispoC = 1; bispoC <= 5; bispoC++) {
+        for (int bispoD = 1; bispoD <=5; bispoD++)
+        {
+          if (bispoC == bispoD)
+          {
+            printf("\nBispo se moveu %d casas para a Direita", bispoD);
+            printf("\nBispo se moveu %d casas para Cima", bispoC);
+          }
+            
+          
+        }
+    
+    }
+
+  
+    
+}
+
+
+int main() {
+
+    printf ("\n Movimento Torre \n");
+       
+        Mtorre(1);
+
+    printf ("\n\n Movimento Rainha \n");
+        
+        Mrainha(1);
+
+    printf ("\n\n Movimento Bispo \n");
+       Mbispo();
+    
+
+   printf ("\n\n Movimento Cavalo \n");
+
+        for (int cavaloC = 1; cavaloC <= 3; cavaloC++) {
+            for (int cavaloD = 1; cavaloD <= 3; cavaloD++) {
+
+        if (!((cavaloC == 2 && cavaloD == 1))) {
+            continue; 
+        }
+
+       
+        printf("\n Cavalo se moveu %d casas para Cima e %d casas para Direita\n", cavaloC, cavaloD);
+
+     
+    }
+}
+
+    return 0;
+}
